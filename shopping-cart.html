@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Cart - Study Hive</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.reflowhq.com/v2/toolkit.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-dark navbar-expand-md sticky-top py-3" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <span>Study Hive</span>
+        </a>
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Explore</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shopping-cart.html">Cart</a>
+                </li>
+            </ul>
+            <a class="btn btn-primary shadow" role="button" href="signup.html" id="loginBtn">Log In</a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Check if the loggedInUser exists in localStorage
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (loggedInUser) {
+        // If the loggedInUser exists, change the text of the login button to "Log Out"
+        const loginBtn = document.getElementById('loginBtn');
+        loginBtn.textContent = 'Log Out';
+
+        // Add an event listener to the login button to clear the loggedInUser from localStorage when clicked
+        loginBtn.addEventListener('click', () => {
+            localStorage.removeItem('loggedInUser');
+            location.reload(); // Reload the page to update the button text
+        });
+    }
+</script>
+    <section id="notLoggedInSection" class="hidden">
+        <div class="container d-flex justify-content-center h-50 py-5">
+            <h1 class="py-5">Login to see your cart</h1>
+        </div>
+    </section>
+<section id="loggedInSection">
+    <div class="container d-flex justify-content-center h-50 py-5">
+        <h1 class="py-5">No item</h1>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-4">Cart Summary</h1>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="cart-list">
+                    <!-- Cart items will be dynamically added here with JavaScript -->
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td>Total:</td>
+                        <td id="cart-total">0</td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</section>
+    <footer class="bg-dark fixed-bottom">
+        <div class="container py-4 py-lg-5">
+            <hr>
+            <div class="text-center text-muted pt-3">
+                <p class="mb-0">Copyright © 2023 Study Hive</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.reflowhq.com/v2/toolkit.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/bold-and-dark.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
