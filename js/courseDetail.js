@@ -3,9 +3,9 @@ loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
 
 getCourseData(courseId);
-isAddedToCart();
-let jsonData;
 
+let jsonData;
+isAddedToCart();
 function getCourseData(id) {
     fetch("courses.json")
         .then((response) => response.json())
