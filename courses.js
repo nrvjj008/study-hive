@@ -82,6 +82,12 @@ function displayCourses(data){
         const cardText = document.createElement("p");
         cardText.classList.add("text-muted");
         cardText.innerText = item.description;
+
+// Set max-height to the height of 3 lines
+        cardText.style.maxHeight = "3em";
+
+// Set overflow to hidden to hide the rest of the text
+        cardText.style.overflow = "hidden";
         const line = document.createElement("hr");
         line.classList.add("hr");
         const cardPrice = document.createElement("p");
