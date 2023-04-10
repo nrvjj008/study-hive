@@ -24,6 +24,10 @@ function addToCart() {
     cartItems[loggedInUser.email] = userCart;
     localStorage.setItem('carts', JSON.stringify(cartItems));
     console.log(userCart);
+    const addToCartButton = document.getElementById('add-to-cart-btn');
+    addToCartButton.innerText = "Added";
+    addToCartButton.disabled = true;
+    addToCartButton.classList.add("bg-dark");
 }
 
 function displayCourse(courseData){
@@ -33,10 +37,6 @@ function displayCourse(courseData){
     const price = courseData.price == 0 ?'Free':"$"+courseData.price;
     document.getElementById('course-price').textContent = price;
 
-    document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-        // Add to cart functionality
-
-    });
 }
 
 function changeImg() {
