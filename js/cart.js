@@ -4,10 +4,19 @@ const loggedInUserFromLocal = JSON.parse(localStorage.getItem('loggedInUser'));
 if (loggedInUserFromLocal) {
     document.getElementById('loggedInSection').classList.remove('hidden');
     document.getElementById('notLoggedInSection').classList.add('hidden');
+    const cartItems = JSON.parse(localStorage.getItem('carts')) || {};
+    const userCart = cartItems[loggedInUserFromLocal.email] || [];
+    if (userCart.length == 0){
+        document.getElementById('loggedInSection').innerHTML = "<div class=\"container d-flex justify-content-center h-50 py-5\">\n" +
+            "            <h1 class=\"py-5\">No Item Added</h1>\n" +
+            "        </div>"
+    }
+
 } else {
     // If user is not logged in, show the notLoggedInSection and hide the loggedInSection
     document.getElementById('loggedInSection').classList.add('hidden');
     document.getElementById('notLoggedInSection').classList.remove('hidden');
+
 }
 
 // Load JSON data from courses.json file

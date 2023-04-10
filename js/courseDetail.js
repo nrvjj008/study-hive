@@ -1,6 +1,11 @@
 const courseId = new URLSearchParams(window.location.search).get('id');
-getCourseData(courseId);
+loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+if (!loggedInUser) {
+    window.location.href = 'login.html';
+}
 
+getCourseData(courseId);
+isAddedToCart();
 let jsonData;
 
 function getCourseData(id) {
@@ -15,13 +20,10 @@ function getCourseData(id) {
 }
 
 function addToCart() {
-    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-    if (!loggedInUser) {
-        window.location.href = 'login.html';
-    }
     const cartItems = JSON.parse(localStorage.getItem('carts')) || {};
     const userCart = cartItems[loggedInUser.email] || [];
-    userCart.push(courseId);
+    if(!userCart.includes(courseId))
+        userCart.push(courseId);
     cartItems[loggedInUser.email] = userCart;
     localStorage.setItem('carts', JSON.stringify(cartItems));
     console.log(userCart);
@@ -30,6 +32,18 @@ function addToCart() {
     addToCartButton.disabled = true;
     addToCartButton.classList.add("bg-dark");
 }
+
+function isAddedToCart(){
+    const cartItems = JSON.parse(localStorage.getItem('carts')) || {};
+    const userCart = cartItems[loggedInUser.email] || [];
+    if(userCart.includes(courseId)) {
+        const addToCartButton = document.getElementById('add-to-cart-btn');
+        addToCartButton.innerText = "Added";
+        addToCartButton.disabled = true;
+        addToCartButton.classList.add("bg-dark");
+    }
+}
+
 
 function displayCourse(courseData) {
     document.getElementById('course-img').src = courseData.image;

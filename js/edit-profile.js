@@ -4,13 +4,21 @@ const password = document.querySelector('#login-password');
 const confirmPassword = document.querySelector('#login-confirmpassword');
 const phone = document.querySelector('#login-phone');
 const name = document.querySelector('#login-name');
-
+if(!loggedInUser) {
+    window.location.href = "login.html";
+}
+else{
+    const user = JSON.parse(loggedInUser);
+    email.value = user.email;
+    name.value = user.name;
+    phone.value = user.phone;
+    password.value = user.password;
+}
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const emailError = document.querySelector('#email-error');
     const passwordError = document.querySelector('#password-error');
     const nameError = document.querySelector('#name-error');
-    const confirmPasswordError = document.querySelector('#confirmpassword-error');
     const phoneError = document.querySelector('#phone-error');
 
     let valid = true; // Set a flag to check if all fields are valid
@@ -35,19 +43,6 @@ form.addEventListener('submit', (e) => {
         valid = false;
     } else {
         passwordError ? passwordError.remove() : null;
-    }
-
-    // Check if confirm password is not blank and matches the password
-    if (confirmPassword.value === '') {
-        confirmPasswordError ? confirmPasswordError.remove() : null;
-        confirmPassword.insertAdjacentHTML('afterend', '<p id="confirmpassword-error" style="color:red">Please confirm your password</p>');
-        valid = false;
-    } else if (confirmPassword.value !== password.value) {
-        confirmPasswordError ? confirmPasswordError.remove() : null;
-        confirmPassword.insertAdjacentHTML('afterend', '<p id="confirmpassword-error" style="color:red">Passwords do not match</p>');
-        valid = false;
-    } else {
-        confirmPasswordError ? confirmPasswordError.remove() : null;
     }
 
     // Check if phone is not blank and is valid
@@ -75,31 +70,32 @@ form.addEventListener('submit', (e) => {
     if (valid) {
 
         // Add the user to the localStorage
-        let user = {
+        let updatedUser = {
             email: email.value,
             password: password.value,
             name: name.value,
-            phone:phone.value
+            phone: phone.value
         };
-        const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+        let existingUsers = JSON.parse(localStorage.getItem('users')) || [];
         let localStorageUser = existingUsers.find(u => u.email === email.value);
-        if (localStorageUser != null) {
-            confirmPassword.insertAdjacentHTML('afterend', '<p id="confirmpassword-error" style="color:red">Email Already exist</p>');
+        if (localStorageUser) {
+            // The email address already exists in the localStorage, so we need to check if it belongs to the user being edited
+            if (localStorageUser.email === updatedUser.email) {
+                // The email address belongs to the user being edited, so we can update their details
+                existingUsers = existingUsers.map(u => {
+                    if (u.email === updatedUser.email) {
+                        return updatedUser;
+                    } else {
+                        return u;
+                    }
+                });
+                localStorage.setItem('users', JSON.stringify(existingUsers));
+                localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
+                window.location.href = 'courses-explore.html';
 
-        } else {
-            existingUsers.push(user);
-            localStorage.setItem('users', JSON.stringify(existingUsers));
-
-            // Set the loggedInUser to the current user
-            localStorage.setItem('loggedInUser', JSON.stringify(user));
-
-            // Redirect to courses-explore.html
-            emailError ? emailError.remove() : null;
-            passwordError ? passwordError.remove() : null;
-            confirmPasswordError ? confirmPasswordError.remove() : null;
-            phoneError ? phoneError.remove() : null;
-            nameError ? nameError.remove() : null;
-            window.location.href = 'courses-explore.html';
+            } else {
+                confirmPassword.insertAdjacentHTML('afterend', '<p id="confirmpassword-error" style="color:red">Email already exists</p>');
+            }
         }
     }
 })

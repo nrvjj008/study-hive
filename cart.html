@@ -19,7 +19,7 @@
 <nav class="navbar navbar-dark navbar-expand-md sticky-top py-3" id="mainNav">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <span>Study Hive</span>
+            <span id="welcome">Study Hive</span>
         </a>
         <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
             <span class="visually-hidden">Toggle navigation</span>
@@ -36,6 +36,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="cart.html">Cart</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="edit-profile.html" id="editProfile" style="display: none">Profile</a>
+                </li>
             </ul>
             <a class="btn btn-primary shadow" role="button" href="signup.html" id="loginBtn">Log In</a>
         </div>
@@ -48,7 +51,13 @@
     if (loggedInUser) {
         // If the loggedInUser exists, change the text of the login button to "Log Out"
         const loginBtn = document.getElementById('loginBtn');
+        const welcomeMsg = document.getElementById('welcome');
         loginBtn.textContent = 'Log Out';
+        welcomeMsg.innerHTML = 'Hi, '+ JSON.parse(loggedInUser).name;
+        var editProfileLink = document.getElementById("editProfile");
+
+// Display the editProfile link by setting its style to block
+        editProfileLink.style.display = "block";
 
         // Add an event listener to the login button to clear the loggedInUser from localStorage when clicked
         loginBtn.addEventListener('click', () => {
