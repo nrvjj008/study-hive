@@ -1,8 +1,6 @@
 const courseId = new URLSearchParams(window.location.search).get('id');
 loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-if (!loggedInUser) {
-    window.location.href = 'login.html';
-}
+
 
 getCourseData(courseId);
 isAddedToCart();
