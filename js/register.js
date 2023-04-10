@@ -91,13 +91,13 @@ form.addEventListener('submit', (e) => {
             // Set the loggedInUser to the current user
             localStorage.setItem('loggedInUser', JSON.stringify(user));
 
-            // Redirect to products.html
+            // Redirect to courses-explore.html
             emailError ? emailError.remove() : null;
             passwordError ? passwordError.remove() : null;
             confirmPasswordError ? confirmPasswordError.remove() : null;
             phoneError ? phoneError.remove() : null;
             nameError ? nameError.remove() : null;
-            window.location.href = 'products.html';
+            window.location.href = 'courses-explore.html';
         }
     }
 })

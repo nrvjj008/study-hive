@@ -3,105 +3,105 @@
     "id": 1,
     "name": "Advanced Data Structures",
     "price": "250",
-    "description": "Learn about complex data structures in programming Learn about complex data structures in programming Learn about complex data structures in programming Learn about complex data structures in programming Learn about complex data structures in programming Learn about complex data structures in programming Learn about complex data structures in programming Learn about complex data structures in programming Learn about complex data structures in programming",
+    "description": "In this course, you'll learn about complex data structures in programming such as arrays, linked lists, trees, and more. Gain a deeper understanding of how these data structures work and when to use them in your programs.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/5765097389555712/image/5737953598898176"
   },
   {
     "id": 2,
     "name": "Web Development Fundamentals",
     "price": "150",
-    "description": "Get started with building web applications Get started with building web applications Get started with building web applications Get started with building web applications Get started with building web applications Get started with building web applications Get started with building web applications Get started with building web applications Get started with building web applications Get started with building web applications Get started with building web applications Get started with building web applications",
+    "description": "Get started with building web applications by understanding the fundamentals of web development. This course covers HTML, CSS, JavaScript, and more, giving you the foundational knowledge you need to create dynamic web pages and applications.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/5637225408626688/image/5662040521703424"
   },
   {
     "id": 3,
     "name": "Java Programming Basics",
     "price": "0",
-    "description": "Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming Learn the fundamentals of Java programming",
+    "description": "This course covers the fundamentals of Java programming. You'll learn about variables, data types, control structures, methods, and more. By the end of the course, you'll have a solid foundation in Java and be ready to move on to more advanced topics.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/5692479535841280/image/6032836802904064"
   },
   {
     "id": 4,
     "name": "Python for Machine Learning",
     "price": "300",
-    "description": "Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models Use Python to build machine learning models",
+    "description": "Use Python to build machine learning models in this course. You'll learn about data preprocessing, model training, and model evaluation. By the end of the course, you'll be able to build your own machine learning models using Python.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/6301089836040192/image/4889844510621696"
   },
   {
     "id": 5,
     "name": "Digital Marketing Essentials",
     "price": "0",
-    "description": "Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing Learn the basics of digital marketing",
+    "description": "This course covers the basics of digital marketing, including search engine optimization, social media marketing, email marketing, and more. You'll learn how to create effective digital marketing strategies that will help you reach your target audience.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/4733468011397120/image/5915282313838592"
   },
   {
     "id": 6,
     "name": "Mobile App Development",
     "price": "300",
-    "description": "Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android Build mobile apps for iOS and Android",
+    "description": "This course will teach you how to build mobile apps for both iOS and Android platforms. You will learn about the best practices for mobile app development and how to create high-quality mobile applications that meet user needs. This course covers everything from the basics of mobile app development to more advanced topics like integrating with third-party APIs and cloud services.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/5637225408626688/image/5662040521703424"
   },
   {
     "id": 7,
     "name": "Introduction to Data Science",
     "price": "200",
-    "description": "Learn the basics of data science Learn the basics of data science Learn the basics of data science Learn the basics of data science Learn the basics of data science Learn the basics of data science Learn the basics of data science Learn the basics of data science Learn the basics of data science Learn the basics of data science Learn the basics of data science Learn the basics of data science",
+    "description": "This course is designed for beginners who want to learn the basics of data science. You will learn about data cleaning, data visualization, statistical analysis, and machine learning. By the end of the course, you will have a solid understanding of the data science workflow and the tools and techniques used by data scientists to solve real-world problems.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/6083138522447872/5629499534213120/image/5234869896478720"
   },
   {
     "id": 8,
     "name": "Full Stack Web Development",
     "price": "200",
-    "description": "Build complete web applications from front to back Build complete web applications from front to back Build complete web applications from front to back Build complete web applications from front to back Build complete web applications from front to back Build complete web applications from front to back Build complete web applications from front to back Build complete web applications from front to back Build complete web applications from front to back",
+    "description": "In this course, you will learn how to build complete web applications from front to back. You will start with the basics of web development, including HTML, CSS, and JavaScript. Then, you will learn how to build server-side applications using Node.js and Express. Finally, you will learn how to connect your web application to a database and deploy it to the web.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/5710902082928640/image/5719042186805248"
   },
   {
     "id": 9,
     "name": "C++ Programming Fundamentals",
     "price": "0",
-    "description": "Learn the basics of C++ programming Learn the basics of C++ programming Learn the basics of C++ programming Learn the basics of C++ programming Learn the basics of C++ programming Learn the basics of C++ programming Learn the basics of C++ programming Learn the basics of C++ programming Learn the basics of C++ programming",
+    "description": "This course is designed for beginners who want to learn the basics of C++ programming. You will learn about variables, control structures, functions, arrays, and pointers. By the end of the course, you will have a solid understanding of the C++ programming language and be able to write your own simple programs.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/5712008708096000/image/5166524507619328"
   },
   {
     "id": 10,
     "name": "Artificial Intelligence Basics",
     "price": "0",
-    "description": "Get started with AI programming Get started with AI programming Get started with AI programming",
+    "description": "This course is designed for beginners who want to get started with AI programming. You will learn about the basics of machine learning and neural networks. By the end of the course, you will have a solid understanding of the key concepts of artificial intelligence and be able to build your own simple AI applications.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/6301089836040192/image/4889844510621696"
   },
   {
     "id": 11,
     "name": "Introduction to Blockchain",
     "price": "0",
-    "description": "Learn the basics of blockchain technology Learn the basics of blockchain technology Learn the basics of blockchain technology",
+    "description": "This course teaches the basics of blockchain technology, including its history, key concepts, and how it works. You'll learn about the various components of a blockchain system and how they interact with each other. Additionally, you'll explore real-world use cases of blockchain technology and the potential impact it can have on different industries.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/6248540122644480/image/6284341065809920"
   },
   {
     "id": 12,
     "name": "Game Development Essentials",
     "price": "300",
-    "description": "Create your own games using popular game engines Create your own games using popular game engines Create your own games using popular game engines",
+    "description": "In this course, you'll learn the essentials of game development using popular game engines such as Unity and Unreal Engine. You'll explore the game development pipeline, including game design, prototyping, asset creation, scripting, and testing. By the end of the course, you'll have created your own game from scratch.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/6301089836040192/image/4889844510621696"
   },
   {
     "id": 13,
     "name": "React.js Fundamentals",
     "price": "200",
-    "description": "Learn the basics of React.js Learn the basics of React.js Learn the basics of React.js",
+    "description": "This course teaches the basics of React.js, a popular JavaScript library used for building user interfaces. You'll learn about React's component-based architecture, JSX syntax, state management, and event handling. Additionally, you'll explore best practices for building scalable and maintainable React applications.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/4597752283529216/image/5808618702110720"
   },
   {
     "id": 14,
     "name": "Database Administration",
     "price": "250",
-    "description": "Learn to manage and maintain databases Learn to manage and maintain databases Learn to manage and maintain databases",
+    "description": "This course teaches you the skills and knowledge needed to manage and maintain databases effectively. You'll learn about database design, normalization, indexing, and security. Additionally, you'll explore different database management systems such as MySQL, Oracle, and MongoDB.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/5710902082928640/image/5719042186805248"
   },
   {
     "id": 15,
     "name": "WordPress Development",
     "price": "0",
-    "description": "Build websites using WordPress Build websites using WordPress Build websites using WordPress",
+    "description": "In this course, you'll learn how to build websites using WordPress, a popular content management system. You'll explore the basics of WordPress installation, theme customization, plugin development, and website optimization. Additionally, you'll learn how to integrate WordPress with different web technologies such as HTML, CSS, and JavaScript.",
     "image": "https://www.educative.io/cdn-cgi/image/format=auto,width=600,quality=75/v2api/collection/10370001/5898593854554112/image/5544659116883968"
   }
 ]

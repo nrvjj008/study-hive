@@ -27,7 +27,7 @@ form.addEventListener('submit', (e) => {
         if (user && user.password === password.value) {
             console.log('Email and password exist');
             localStorage.setItem('loggedInUser', JSON.stringify(user));
-            window.location.href = 'products.html';
+            window.location.href = 'courses-explore.html';
 
         } else {
             console.log('Email and/or password do not exist');

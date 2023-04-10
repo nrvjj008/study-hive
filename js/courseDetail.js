@@ -2,12 +2,13 @@ const courseId = new URLSearchParams(window.location.search).get('id');
 getCourseData(courseId);
 
 let jsonData;
-function getCourseData(id){
+
+function getCourseData(id) {
     fetch("courses.json")
         .then((response) => response.json())
         .then((data) => {
             jsonData = data;
-            const course = data.filter((course)=> course.id == id);
+            const course = data.filter((course) => course.id == id);
             console.log(course);
             displayCourse(course[0]);
         })
@@ -30,11 +31,11 @@ function addToCart() {
     addToCartButton.classList.add("bg-dark");
 }
 
-function displayCourse(courseData){
+function displayCourse(courseData) {
     document.getElementById('course-img').src = courseData.image;
     document.getElementById('course-name').textContent = courseData.name;
     document.getElementById('course-description').textContent = courseData.description;
-    const price = courseData.price == 0 ?'Free':"$"+courseData.price;
+    const price = courseData.price == 0 ? 'Free' : "$" + courseData.price;
     document.getElementById('course-price').textContent = price;
 
 }
@@ -44,7 +45,7 @@ function changeImg() {
     let $courseImg = $('#course-img');
 
     // fade out the current image
-    $courseImg.fadeOut('slow', function() {
+    $courseImg.fadeOut('slow', function () {
         // change the image source
         $courseImg.attr('src', jsonData[randomNum].image);
 

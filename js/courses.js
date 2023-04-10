@@ -3,18 +3,17 @@
 displayFilteredData();
 
 const freeCourses = document.querySelector('#flexSwitchCheckDefault');
-freeCourses.addEventListener('click', function() {
+freeCourses.addEventListener('click', function () {
     displayFilteredData();
 });
 
-function isFreeOnlyChecked(){
+function isFreeOnlyChecked() {
     return document.getElementById("flexSwitchCheckDefault").checked;
 }
 
-function getSearchText(){
+function getSearchText() {
     return searchInput.value.toLowerCase();
 }
-
 
 
 // Get reference to search input element
@@ -34,7 +33,7 @@ function displayFilteredData() {
             const searchTerm = getSearchText();
             // Filter courses based on search term
             let filteredData = data.filter((course) => course.name.toLowerCase().includes(searchTerm) || course.description.toLowerCase().includes(searchTerm));
-            if(isFreeOnlyChecked())
+            if (isFreeOnlyChecked())
                 filteredData = filteredData.filter((course) => course.price == 0);
             if (filteredData.length > 0) {
                 // Display filtered data
@@ -48,7 +47,7 @@ function displayFilteredData() {
         .catch((error) => console.error(error));
 }
 
-function displayCourses(data){
+function displayCourses(data) {
     // Get reference to the card row element
     const cardRow = document.getElementById("card-row");
 
@@ -97,7 +96,7 @@ function displayCourses(data){
         let discountedPrice = parseInt(originalPrice) + (originalPrice * 0.1);
         let priceText = `<del>$${discountedPrice}</del> $${originalPrice}`;
 
-        if(originalPrice == 0)
+        if (originalPrice == 0)
             priceText = 'Free'
         cardPrice.innerHTML = priceText;
 
@@ -113,7 +112,7 @@ function displayCourses(data){
         cardRow.appendChild(card);
         card.addEventListener("click", () => {
             // Redirect to new page with course details
-            window.location.href = `product.html?id=${item.id}`;
+            window.location.href = `course-detail.html?id=${item.id}`;
         });
     });
 }

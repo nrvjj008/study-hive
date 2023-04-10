@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Load the JSON data
-    $.getJSON('reviews.json', function(data) {
+    $.getJSON('reviews.json', function (data) {
         // Initialize the review index and the review count
         var index = 0;
         var count = data.reviews.length;
@@ -12,7 +12,7 @@ $(document).ready(function() {
         $('#review-text').text(reviewData.review);
 
         // Loop through the reviews every second
-        setInterval(function() {
+        setInterval(function () {
             // Increment the review index and wrap around if necessary
             index = (index + 1) % count;
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
             reviewData = data.reviews[index];
 
             // Fade out the div and update the review data
-            $('#review-container').fadeOut('slow', function() {
+            $('#review-container').fadeOut('slow', function () {
                 $('#review-name').text(reviewData.name);
                 $('#review-image').attr('src', reviewData.image);
                 $('#review-text').text(reviewData.review);
@@ -44,12 +44,12 @@ $(document).ready(function() {
 
     // Define the animation options
     var animationOptions = {
-        complete: function() {
+        complete: function () {
             // Animation complete
             tagline.animate({
                 opacity: 0.9,
                 top: "-=50px",
-            }, 500, function() {
+            }, 500, function () {
                 // Animation complete
                 tagline.text(originalText);
             });
@@ -57,7 +57,7 @@ $(document).ready(function() {
     };
 
     // Start the animation loop
-    setInterval(function() {
+    setInterval(function () {
         // Animate the text
         tagline.animate(animationProperties, animationOptions);
 
