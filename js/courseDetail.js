@@ -18,6 +18,10 @@ function getCourseData(id) {
 }
 
 function addToCart() {
+    if(!loggedInUser){
+        window.location.href="login.html";
+        return;
+    }
     const cartItems = JSON.parse(localStorage.getItem('carts')) || {};
     const userCart = cartItems[loggedInUser.email] || [];
     if(!userCart.includes(courseId))
